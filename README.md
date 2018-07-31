@@ -30,6 +30,8 @@ Run `carthage update` to build the framework and drag the built `SoftButton.fram
 
 Just download the project, and drag and drop the "SoftButton" folder in your project.
 
+> If you have troubles displaying controls in Storyboard, add `@loader_path/../Frameworks` value to `Runpath Search Paths` of your target build setting.
+
 ## License
 
 **SoftButton** is available under the MIT license. See the [LICENSE](https://github.com/ideil/SoftButton/blob/develop/LICENSE) file for more info.
