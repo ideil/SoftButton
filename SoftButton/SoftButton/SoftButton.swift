@@ -8,7 +8,7 @@
 import UIKit
 
 @IBDesignable
-class SoftButton: UIButton, UIGestureRecognizerDelegate {
+open class SoftButton: UIButton, UIGestureRecognizerDelegate {
     
     @IBInspectable var cornerRadius: CGFloat = 0 {
         didSet {
