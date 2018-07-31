@@ -10,63 +10,63 @@ import UIKit
 @IBDesignable
 open class SoftButton: UIButton, UIGestureRecognizerDelegate {
     
-    @IBInspectable var cornerRadius: CGFloat = 0 {
+    @IBInspectable public var cornerRadius: CGFloat = 0 {
         didSet {
             layer.cornerRadius = cornerRadius
         }
     }
     
-    @IBInspectable var borderWidth: CGFloat = 0 {
+    @IBInspectable public var borderWidth: CGFloat = 0 {
         didSet {
             layer.borderWidth = borderWidth
         }
     }
     
-    @IBInspectable var borderColor: UIColor? {
+    @IBInspectable public var borderColor: UIColor? {
         didSet {
             layer.borderColor = borderColor?.cgColor
         }
     }
     
-    @IBInspectable var bgColor: UIColor? {
+    @IBInspectable public var bgColor: UIColor? {
         didSet {
             backgroundColor = bgColor
         }
     }
     
-    @IBInspectable var highlightedBgColor: UIColor = UIColor.white
+    @IBInspectable public var highlightedBgColor: UIColor = UIColor.white
     
-    @IBInspectable var gradientStartColor: UIColor? = nil
-    @IBInspectable var gradientEndColor: UIColor? = nil
-    @IBInspectable var isGradientHorizontal: Bool = false
+    @IBInspectable public var gradientStartColor: UIColor? = nil
+    @IBInspectable public var gradientEndColor: UIColor? = nil
+    @IBInspectable public var isGradientHorizontal: Bool = false
     
-    @IBInspectable var shadowOffset: Double = 0 {
+    @IBInspectable public var shadowOffset: Double = 0 {
         didSet {
             layer.shadowOffset = CGSize(width: 0, height: shadowOffset)
         }
     }
     
-    @IBInspectable var activeShadowOffset: Double = 0
+    @IBInspectable public var activeShadowOffset: Double = 0
     
     
-    @IBInspectable var shadowRadius: Double = 0 {
+    @IBInspectable public var shadowRadius: Double = 0 {
         didSet {
             layer.shadowRadius = CGFloat(shadowRadius)
             layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath
         }
     }
-    @IBInspectable var activeShadowRadius: Double = 1 {
+    @IBInspectable public var activeShadowRadius: Double = 1 {
         didSet {
             if activeShadowRadius < 1 { activeShadowRadius = 1 }
         }
     }
     
-    @IBInspectable var shadowColor: UIColor? {
+    @IBInspectable public var shadowColor: UIColor? {
         didSet {
             layer.shadowColor = shadowColor?.cgColor
         }
     }
-    @IBInspectable var shadowOpacity: CGFloat = 0 {
+    @IBInspectable public var shadowOpacity: CGFloat = 0 {
         didSet {
             layer.shadowOpacity = Float(shadowOpacity)
         }
@@ -75,7 +75,7 @@ open class SoftButton: UIButton, UIGestureRecognizerDelegate {
     private let gradientLayer = CAGradientLayer()
     private var animator: UIViewPropertyAnimator!
     private var pressRecognizer: UILongPressGestureRecognizer!
-    override func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         
         self.setupGradient()
@@ -110,7 +110,7 @@ open class SoftButton: UIButton, UIGestureRecognizerDelegate {
         setNeedsDisplay()
     }
     
-    override func layoutSublayers(of layer: CALayer) {
+    override open func layoutSublayers(of layer: CALayer) {
         super.layoutSublayers(of: layer)
         
         if layer == self.layer {
@@ -233,7 +233,7 @@ open class SoftButton: UIButton, UIGestureRecognizerDelegate {
     
     // MARK: UIGestureRecognizerDelegate
     
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
     
