@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5E0CD89C210A6B1C00F83C12 /* SoftButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E0CD89A210A6B1C00F83C12 /* SoftButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5E3CBE9A210F70950083EBCE /* SoftButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CBE99210F70950083EBCE /* SoftButton.swift */; };
+		5E53D0142110B60E00E05921 /* SoftButton.swift in Headers */ = {isa = PBXBuildFile; fileRef = 5E3CBE99210F70950083EBCE /* SoftButton.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E0CD89C210A6B1C00F83C12 /* SoftButton.h in Headers */,
+				5E53D0142110B60E00E05921 /* SoftButton.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
