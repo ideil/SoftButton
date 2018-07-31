@@ -1,7 +1,7 @@
 # SoftButton by [ideil.](https://www.ideil.com)
 
 <p align="center">
-    <img width="900px" src="Assets/softbutton-banner.jpg">
+    <img width="900px" src="Assets/softbutton-banner.png">
 </p>
 
 <p align="center">
