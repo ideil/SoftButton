@@ -72,6 +72,16 @@ open class SoftButton: UIButton, UIGestureRecognizerDelegate {
         }
     }
     
+    open override var isEnabled: Bool {
+        didSet {
+            if isEnabled {
+                alpha = 1
+            } else {
+                alpha = 0.5
+            }
+        }
+    }
+    
     private let gradientLayer = CAGradientLayer()
     private var animator: UIViewPropertyAnimator!
     private var pressRecognizer: UILongPressGestureRecognizer!
@@ -88,6 +98,12 @@ open class SoftButton: UIButton, UIGestureRecognizerDelegate {
         pressRecognizer.minimumPressDuration = 0
         pressRecognizer.cancelsTouchesInView = false
         addGestureRecognizer(pressRecognizer)
+        
+        if isEnabled {
+            alpha = 1
+        } else {
+            alpha = 0.5
+        }
     }
     
     private func setupGradient() {
